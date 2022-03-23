@@ -9,17 +9,29 @@ val df = spark.read.option("header", "true").option("inferSchema", "true")csv("E
 df.printSchema()
 // End of load
 
-//1
+//1 1. Start a simple Spark session.
 
-//2
+C:\Spark\spark-2.4.8-bin-hadoop2.7\bin\spark-shell
+import org.apache.spark.sql.SparkSession
+val spark = SparkSession.builder().getOrCreate()
 
-//3
 
-//4
+//2  Load the Netflix Stock CSV file, have Spark infer the data types.
+val data=spark.read.option("Header", "true").option("inferSchema", "true")csv("Netflix_2011_2016.csv")
+val data =  spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/52664/Downloads/Netflix_2011_2016.csv")
 
-//5
 
-//6
+//3 What are the column names?
+data.columns
+
+//4 How is the scheme?
+data.printSchema()
+
+//5Print the first 5 columns.
+Data.columns.take(5)
+
+//6Use describe() to learn about the DataFrame.
+data.describe().show()
 
 //7 - Create a new dataframe with a new column called "HV Ratio" which is the ratio that
 //  exists between the price of the “High” column versus the “Volume” column of shares

@@ -54,7 +54,7 @@ df.select(corr("High", "Volume")).show()
 
 //d) What is the maximum of the “High” column per year?
 val yeardf = df.withColumn("Year", year(df("Date")))
-val yearmaxs = yeardf.select($"Year", $"High").groupBy("Year").max()
+val yearmaxs = yeardf.select($"Year", $"High").groupBy("Year").max().show()
 
 //e) What is the average of the “Close” column for each calendar month?
 val monthdf = df.withColumn("Month",month(df("Date")))

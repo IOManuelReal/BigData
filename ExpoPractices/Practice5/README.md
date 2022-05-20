@@ -1,4 +1,4 @@
-<p align="center"> 
+<p align="center">
   <img src="/Images/Title.png" />
 </p>
 
@@ -19,50 +19,38 @@
 > **Unidad:** 2
 >
 > **Titulo**
-> Practica 5
+> Practica 6
 >
 > **Alumnos**<br>
 > Anahi Del Carmen Hernandez Pablo *18210486* <br>
 > Manuel Angel Real Castro  *18212253*
 
 # Content
-> Here we add the libraries that will be needed for practice <br>
-
-<p align="center"> 
-  <img src="/imageP5/Imagen1.jpg" />
+>I started session in the spark and we added the library that we needed for this practice<br> 
+<p align="center">
+  <img src="/imageP5/ImageP6/im1.png" />
+</p>
+<p align="center">
+  <img src="/imageP5/ImageP6/im2.png" />
 </p>
 
->Load the data stored in LIBSVM format as a DataFrame.<br>
-<p align="center"> 
-  <img src="/imageP5/Imagen2.jpg" /> 
+>Load training data<br>
+<p align="center">
+  <img src="/imageP5/ImageP6/im3.png" />
 </p>
 
->Split the data into train and test<br>
-<p align="center"> 
-  <img src="/imageP5/Imagen3.jpg" /> 
+>create the trainer and set its parameters<br>
+
+<p align="center">
+  <img src="/imageP5/ImageP6/im4.png" />
 </p>
 
->specify layers for the neural network:<br>
-input layer of size 4 (features), two intermediate of size 5 and 4<br>
-and output of size 3 (classes)<br>
-  <p align="center"> 
-  <img src="/imageP5/Imagen4.jpg" /> 
-</p>
-<br>create the trainer and set its parameters
-  <p align="center"> 
-  <img src="/imageP5/Imagen5.jpg" /> 
-</p>
-<br>train the model
-<p align="center"> 
-  <img src="/imageP5/Imagen6.jpg" /> 
-</p>
-<br>compute accuracy on the test set
-<p align="center"> 
-  <img src="/imageP5/Imagen7.jpg" /> 
-</p>
-<br>print the results
-<p align="center"> 
-  <img src="/imageP5/Imagen8.jpg" /> 
+>fit the model<br>
+<p align="center">
+  <img src="/imageP5/ImageP6/im5.png" />
 </p>
 
- 
+>Print coefficients and intercept for linear svc<br>
+<p align="center">
+  <img src="/imageP5/ImageP6/im6.png" />
+</p>

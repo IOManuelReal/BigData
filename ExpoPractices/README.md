@@ -12,4 +12,4 @@ Las siguientes carpetas continen las respectivas practicas de los siguientes tem
 - **Practice4:** [Gradient-boosted tree classifier](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice4)
 - **Practice5:** [Multilayer perceptron classifier](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice5)
 - **Practice6:** [Linear Support Vector Machine](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice6)
-- **Practice7:** [Naive Bayes]
+- **Practice7:** [Naive Bayes](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice7)

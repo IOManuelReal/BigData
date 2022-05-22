@@ -24,7 +24,7 @@ val featureIndexer = new VectorIndexer()
 ```
 
 Split the data into training and test sets (30% held out for testing).
-```
+```js
 val Array(trainingData, testData) = data.randomSplit(Array(0.7, 0.3))   
 
 Train a RandomForest model.  

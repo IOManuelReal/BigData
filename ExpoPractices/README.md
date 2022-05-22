@@ -1,10 +1,10 @@
 # BigData
-Repositorio de evidencias para la materia de Datos Masivos (BDD-1704SC9C)
+Evidence repository for the Big Data subject (BDD-1704SC9C)
 
-Esta carpeta contiene la documentacion de los ejercicios mostrados por mis compañeros en sus respectivas exposiciones
+This folder contains the documentation of the exercises shown by my colleagues in their respective exhibitions
 
 ## Indice
-Las siguientes carpetas continen las respectivas practicas de los siguientes temas:
+The following folders contain the respective practices of the following topics:
 
 - **Practice1:** [Basic Statistics](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice1)
 - **Practice2:** [Decision tree classifier](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice2)
@@ -12,4 +12,4 @@ Las siguientes carpetas continen las respectivas practicas de los siguientes tem
 - **Practice4:** [Gradient-boosted tree classifier](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice4)
 - **Practice5:** [Multilayer perceptron classifier](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice5)
 - **Practice6:** [Linear Support Vector Machine](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice6)
-- **Practice7:** [Naive Bayes]
+- **Practice7:** [Naive Bayes](https://github.com/IOManuelReal/BigData/tree/Unit2/ExpoPractices/Practice7)

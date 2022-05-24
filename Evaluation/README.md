@@ -155,3 +155,6 @@ We display the model results using the `predictionDf.show(10)` command.
 <p>
   <img src="/Images/EvaluatoryPractice/img3.jpg" />
 </p>
+<p> exam video </p>
+<p> https://www.youtube.com/watch?v=9whLnjdFmdM  </p>
+

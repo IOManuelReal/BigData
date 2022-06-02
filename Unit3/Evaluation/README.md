@@ -39,45 +39,65 @@
 - ### Activity 1
 > Importar una simple sesión Spark. 
 
+
 ```js
-//Put your code here
+import org.apache.spark.sql.SparkSession
 ```
+> <p align="center">
+  <img src="/Images/EvaluatoryPractice/images01.png" />
+</p>
 
 - ### Activity 2
 > Utilice las lineas de código para minimizar errores
 
 ```js
-//Put your code here
+import org.apache.log4j._
+Logger.getLogger("org").setLevel(Level.ERROR)
 ```
+> <p align="center">
+  <img src="/Images/EvaluatoryPractice/images02.png" />
+</p>
 
 - ### Activity 3
 > Cree una instancia de la sesión Spark
 
 ```js
-//Put your code here
+val spark = SparkSession.builder.getOrCreate()
 ```
+> <p align="center">
+  <img src="/Images/EvaluatoryPractice/images03.png" />
+</p>
+
 
 - ### Activity 4
 > Importar la librería de Kmeans para el algoritmo de agrupamiento. 
 
 ```js
-//Put your code here
+import org.apache.spark.ml.clustering.KMeans
 ```
+> <p align="center">
+  <img src="/Images/EvaluatoryPractice/images04.png" />
+</p>
 
 - ### Activity 5
 > Carga el dataset de Wholesale Customers Data 
 
 ```js
-//Put your code here
+val dataset = spark.read.option("header", "true").option("inferSchema","true")csv("C:/Users/52664/Desktop/Unit3/Wholesale customers data.csv")
 ```
-
+> <p align="center">
+  <img src="/Images/EvaluatoryPractice/images05.png" />
+</p>
 - ### Activity 6
 > Seleccione las siguientes columnas: Fresh, Milk, Grocery, Frozen, Detergents_Paper,
 Delicassen y llamar a este conjunto feature_data
 
 ```js
-//Put your code here
+val  feature_data  = dataset.select("Fresh","Milk","Grocery","Frozen","Detergents_Paper","Delicassen")
 ```
+> <p align="center">
+  <img src="/Images/EvaluatoryPractice/images06.png" />
+</p>
 
 - ### Activity 7
  > Importar Vector Assembler y Vector 

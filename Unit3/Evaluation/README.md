@@ -33,6 +33,10 @@
 > **Objetivo:**
 > El objetivo de este examen práctico es tratar de agrupar los clientes de regiones específicas de un distribuidor al mayoreo. Esto en 
 > base a las ventas de algunas categorías de productos. 
+
+
+## Video
+https://www.youtube.com/watch?v=KD2FVhFWQ60
 > Las fuente de datos se encuentra en el repositorio: 
 > https://github.com/jcromerohdz/BigData/blob/master/Spark_clustering/Wholesale%20customers%20data.csv 
 

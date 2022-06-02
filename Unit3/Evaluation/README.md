@@ -27,45 +27,109 @@
 
 # Examen 
 ## Instructions
+> **Instrucciones: ** 
+> Desarrolle las siguientes instrucciones en Spark con el lenguaje de programación Scala. 
+> 
+> **Objetivo:**
+> El objetivo de este examen práctico es tratar de agrupar los clientes de regiones específicas de un distribuidor al mayoreo. Esto en 
+> base a las ventas de algunas categorías de productos. 
+> Las fuente de datos se encuentra en el repositorio: 
+> https://github.com/jcromerohdz/BigData/blob/master/Spark_clustering/Wholesale%20customers%20data.csv 
 
-Instructions
-<p>Develop the following statements in Spark using the Scala programming language.</p>
-<p>Objective:</p>
-<p>The goal of this practical exam is to try to group customers from specific regions</p>
-<p>from a wholesale distributor. This is based on the sales of some product categories.</p>
-The data sources are located in the repository:</p>
-https://github.com/jcromerohdz/BigData/blob/master/Spark_clustering/Wholesale%20customers%20data.csv
+- ### Activity 1
+> Importar una simple sesión Spark. 
 
+```js
+//Put your code here
+```
 
-<p></p>
-<p></p>
+- ### Activity 2
+> Utilice las lineas de código para minimizar errores
 
-<p></p>
-<p></p>
+```js
+//Put your code here
+```
 
-<p></p>
-<p></p>
+- ### Activity 3
+> Cree una instancia de la sesión Spark
 
-<p>1. Import a simple Spark session.</p>
+```js
+//Put your code here
+```
 
+- ### Activity 4
+> Importar la librería de Kmeans para el algoritmo de agrupamiento. 
 
-<p>2. Use the lines of code to minimize errors</p>
-<p>3. Create an instance of the Spark session</p>
-<p>4. Import the Kmeans library for the clustering algorithm.</p>
-<p>5. Load the Wholesale Customers Data dataset</p>
-<p>6. Select the following columns: Fresh, Milk, Grocery, Frozen, Detergents_Paper,Delicassen and call this set feature_data</p>
-<p>7. Import Vector Assembler and Vector</p>
-<p>8. Create a new Vector Assembler object for the feature columns as a input set, remembering that there are no labels</p>
-<p>9. Use the assembler object to transform feature_data</p>
-<p>10.Create a Kmeans model with K=3</p>
-<p>11.Evaluate the groups using Within Set Sum of Squared Errors WSSSE and print the
-centroids.</p>
+```js
+//Put your code here
+```
 
+- ### Activity 5
+> Carga el dataset de Wholesale Customers Data 
 
+```js
+//Put your code here
+```
 
+- ### Activity 6
+> Seleccione las siguientes columnas: Fresh, Milk, Grocery, Frozen, Detergents_Paper,
+Delicassen y llamar a este conjunto feature_data
 
+```js
+//Put your code here
+```
 
+- ### Activity 7
+ > Importar Vector Assembler y Vector 
+ 
+Import the library to make the "features" column contain the vector created earlier. <br>
 
+```js
+import org.apache.spark.ml.feature.VectorAssembler
+```
 
+- ### Activity 8
+ > Crea un nuevo objeto Vector Assembler para las columnas de caracteristicas como un conjunto de entrada, recordando que no hay etiquetas
+ 
+Import the library to make the "features" column contain the vector created earlier. <br>
 
+```js
+val assembler = new VectorAssembler().setInputCols(cols).setOutputCol("features")
+```
 
+- ### Activity 9
+ > Utilice el objeto assembler para transformar feature_data
+ 
+Add the column of "features" to our dataframe. <br>
+
+```js
+val featureDf = assembler.transform(df)
+```
+
+- ### Activity 10
+ > Crear un modelo Kmeans con K=3
+ 
+Define the KMeans set and fit the model in the dataframe. <br>
+
+```js
+val kmeans = new KMeans().setK(3).setSeed(1L)
+val model = kmeans.fit(featureDf)
+```
+
+- ### Activity 11
+> Evalúe los grupos utilizando Within Set Sum of Squared Errors WSSSE e imprima los
+centroides.
+
+We evaluate the model with the group of WSSSE and print the results.
+
+```js
+val WSSSE = model.computeCost(featureDf)
+println(s"Within Set Sum of Squared Errors = $WSSSE")
+
+println("Cluster Centers: ")
+model.clusterCenters.foreach(println)
+```
+
+<p>
+  <img src="/Images/EvaluatoryPractice-U3/img1.JPG" />
+</p>

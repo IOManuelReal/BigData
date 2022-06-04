@@ -30,7 +30,7 @@ Data Processing <https://medium.com/@crscardellino/procesando-datos-con-spark-ii
 
 # Indice
 - [Introduccion](#introducción)
-- [Marco teoríco](#marco-teoríco)
+- [Marco teoríco](#marco-teórico)
 - [Implementación](#implementación)
 - [Resultados](#resultados) 
 - [Conclusiones](#conclusiones)
@@ -45,7 +45,7 @@ Curabitur cursus porta velit, ac malesuada lorem cursus vel. Curabitur a libero 
 
 Nullam sit amet condimentum nunc, vitae facilisis metus. Cras quis sollicitudin mi. Nullam maximus nulla ut tortor vulputate accumsan. Fusce cursus mi nec risus eleifend, ultricies facilisis diam consequat. Nullam vitae vestibulum neque. Sed nec lorem ligula. Curabitur ullamcorper lectus a molestie finibus. Quisque sit amet odio ultricies, cursus nunc at, mattis augue. Etiam mauris tortor, semper eu congue non, sollicitudin quis mi. Donec aliquet dui sed enim pulvinar, laoreet finibus quam sagittis. Morbi aliquet suscipit ipsum. Nulla varius leo mi, et finibus urna tempor aliquet. Suspendisse potenti. Aliquam non risus et mauris facilisis vulputate. Donec aliquam sodales arcu, ut scelerisque risus varius sed. <br>
 
-# Marco teoríco
+# Marco teórico
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor nulla vitae massa feugiat, eu efficitur nisl dictum. Sed ultricies sollicitudin diam vitae blandit. Sed faucibus efficitur turpis, non condimentum arcu vehicula sed. Cras quis eleifend mi, et congue nisi. Nulla ornare, metus vitae suscipit sollicitudin, sapien eros ultricies libero, sit amet rhoncus metus dui euismod dolor. Integer ac commodo dolor, ac dignissim quam. In posuere ex in imperdiet malesuada. Nullam congue ante ipsum, in commodo sapien gravida imperdiet. Phasellus odio nibh, pulvinar a bibendum sed, finibus eget risus. Donec molestie tincidunt lobortis. In vulputate consequat eros, id vestibulum enim vulputate vitae.
 
 Quisque in molestie urna. Suspendisse vel pretium felis, fringilla lobortis nisl. In faucibus erat nec mi dictum consequat id vitae arcu. Integer congue augue sit amet lorem gravida tincidunt. Nulla facilisi. Suspendisse suscipit fringilla nulla eget eleifend. Vestibulum semper sem vitae justo aliquam rutrum.

@@ -25,7 +25,8 @@
 > Anahi Del Carmen Hernandez Pablo *18210486* <br>
 > Manuel Angel Real Castro  *18212253*
 
-Por si olvido la sintaxis de Markdown <https://www.markdownguide.org/basic-syntax/>
+Por si olvido la sintaxis de Markdown <https://www.markdownguide.org/basic-syntax/> <br>
+Data Processing <https://medium.com/@crscardellino/procesando-datos-con-spark-ii-carga-y-limpieza-de-datos-b15896f38cd0>
 
 # Indice
 - [Introduccion](#introducción)

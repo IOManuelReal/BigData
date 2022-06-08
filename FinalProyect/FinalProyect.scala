@@ -60,28 +60,28 @@ println("Accuracy: " + metrics.accuracy)
 println(s"Test Error = ${(1.0 - metrics.accuracy)}")
 
 //MLP
-var labelIndexer = new StringIndexer().setInputCol("loan").setOutputCol("indexedLabel").fit(df)
-var indexed = labelIndexer.transform(df).withColumnRenamed("indexedLabel", "label")
+val labelIndexer = new StringIndexer().setInputCol("loan").setOutputCol("indexedLabel").fit(df)
+val indexed = labelIndexer.transform(df).withColumnRenamed("indexedLabel", "label")
 
-var assembler = new VectorAssembler().setInputCols(Array("balance","day","duration","previous")).setOutputCol("features")
-var features = assembler.transform(indexed)
+val assembler = new VectorAssembler().setInputCols(Array("balance","day","duration","previous")).setOutputCol("features")
+val features = assembler.transform(indexed)
 
-var splits = features.randomSplit(Array(0.7, 0.3), seed = 1234L)
-var train = splits(0)
-var test = splits(1)
+val splits = features.randomSplit(Array(0.7, 0.3), seed = 1234L)
+val train = splits(0)
+val test = splits(1)
 
-var layers = Array[Int](4, 5, 4, 2)
+val layers = Array[Int](4, 5, 4, 2)
 
-var trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
+val trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
 
-var model = trainer.fit(train)
+val model = trainer.fit(train)
 
-var result = model.transform(test)
-var predictionAndLabels = result.select("prediction", "label")
-var evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
+val result = model.transform(test)
+val predictionAndLabels = result.select("prediction", "label")
+val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
 
 println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
-var error = 1 - evaluator.evaluate(predictionAndLabels)
+val error = 1 - evaluator.evaluate(predictionAndLabels)
 println("Error: " + error)
 
 result.select("poutcome","y","label","features","rawPrediction","probability","prediction").show()

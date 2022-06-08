@@ -282,7 +282,11 @@ Average algorithms
 <br>
 
 # Conclusiones
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum, metus at varius eleifend, dui augue sodales odio, in scelerisque enim velit ut orci. Aenean mi odio, interdum blandit finibus efficitur, feugiat at purus. Vestibulum vel turpis vitae felis pharetra dictum. Suspendisse et velit in quam tincidunt commodo ac vel eros. Vivamus a molestie diam. Proin scelerisque at velit sit amet scelerisque. Ut velit massa, viverra elementum ligula vitae, vulputate efficitur tellus. Vestibulum lacinia dolor eu tortor facilisis, a suscipit nulla varius. Curabitur nunc libero, accumsan ut semper a, aliquet vitae nibh. Donec id venenatis nunc. Donec fringilla pulvinar diam, bibendum aliquet urna lobortis id. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed finibus ex nunc, vel maximus nibh pulvinar sit amet. Vestibulum a enim porta, scelerisque nisl posuere, mollis mi. <br>
+Dentro de las pruebas realizadas con cada uno de los sistemas de clasificación, obtuvimos un resultado en donde el algoritmo de Regresión Logística obtuvo un valor más alto a la hora de compararlo con los resultados de los demás algoritmos.
+
+Como podemos observar, cada algoritmo tiene sus ventajas y desventajas, por lo que aunque tenemos un valor métrico obtenido en esta investigación, siempre es bueno tomar en cuenta cada uno de estos sistemas a la hora de clasificar datos. Pues puede ser más eficaz a la hora de obtener datos más precisos.
+
+Cada algoritmo presentó sus diferencias y sus propios elementos a comprender, por lo que al igual que considerar su eficiencia, se debe conocer a detalle el funcionamiento del mismo para poder hacer uso del mismo correctamente, debido a que el uso incorrecto puede llevar a inconsistencias a la hora de ejecutar los sistemas de clasificación. <br>
 
 # Referencias 
 Canales, J. C. (2009, agosto 18). Clasificación de grandes conjuntos de datos vía Máquinas de Vectores Soporte y aplicaciones en sistemas biológicos. Cinvestav.mx. http://www.ctrl.cinvestav.mx/~yuw/pdf/DoTesJCC.pdf

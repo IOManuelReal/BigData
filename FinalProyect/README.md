@@ -36,6 +36,10 @@ Data Processing <https://medium.com/@crscardellino/procesando-datos-con-spark-ii
   - [Regresión Logística](#regresi%C3%B3n-log%C3%ADstica)
   - [Perceptrón Multicapa](#perceptr%C3%B3n-multicapa)
 - [Implementación](#implementación)
+  - [Uso de Máquinas de Vectores Soporte (SVM)](#uso-de-m%C3%A1quinas-de-vectores-soporte-svm) 
+  - [Uso de Clasificadores de árboles de decisión](#uso-de-clasificadores-de-%C3%A1rboles-de-decisi%C3%B3n)
+  - [Uso de Regresión Logística](#uso-de-regresi%C3%B3n-log%C3%ADstica)
+  - [Uso de Perceptrón Multicapa](#uso-de-perceptr%C3%B3n-multicapa)
 - [Resultados](#resultados) 
 - [Conclusiones](#conclusiones)
 - [Referencias](#referencias)
@@ -62,11 +66,9 @@ Las redes neuronales, árboles de decisión y SVM son clasificadores de aprendiz
 
 En este Capítulo son definidas las características teóricas de las SVM para problemas de clasificación con dos clases. Primero, definimos las funciones decisión y su importancia al generalizar, después definimos las Máquinas de Vectores Soporte con margen duro, para conjuntos de datos de entrenamiento linealmente separables en el espacio de entrada. Una vez concluido esto, nos extendemos a el caso linealmente no separable y es necesario trasladar el espacio de datos de entrada a un espacio de características altamente dimensional con el propósito de separar linealmente el espacio de características. **Canales, J. C. (2009, agosto 18)**.
 
-
-
-
-
-
+<p align="center">
+  <img src="/Images/FinalProyect/img1.jpg" />
+</p><br>
 
 ### Clasificadores de árboles de decisión
 Los árboles de decisión son algoritmos estadísticos o técnicas de machine learning que nos permiten la construcción de modelos predictivos de analítica de datos para el Big Data basados en su clasificación según ciertas características o propiedades, o en la regresión mediante la relación entre distintas variables para predecir el valor de otra.
@@ -86,9 +88,6 @@ Los árboles de decisión se emplean generalmente en Big Data para predecir la p
 Hacer estimaciones de las primas de seguros a cobrar a los asegurados.
 Predecir si se le debe ofrecer un determinado producto a una persona.
 
-
-
-
 ### Regresión Logística
 La regresión logística es un proceso de modelado de la probabilidad de un resultado discreto dada una variable de entrada. La regresión logística más común modela un resultado binario; algo que puede tomar dos valores como verdadero/falso, sí/no, etc. 
 
@@ -106,7 +105,9 @@ La principal diferencia entre la regresión lineal y la regresión logística es
 ### Perceptrón Multicapa
 El perceptrón multicapa (Multilayer Perceptron o MLP) se trata de una red neuronal artificial conformada por tres capas distintas: La capa de entrada, la oculta y la capa de salida.
 
-
+<p align="center">
+  <img src="/Images/FinalProyect/img2.jpg" />
+</p><br>
 
 Como su nombre lo dice, la capa de entrada se encarga de tomar los datos que serán procesados por el sistema de clasificación, mientras que la salida nos permitirá ver los resultados de la misma. Dentro del perceptrón multicapa existe una cantidad de capas ocultas colocadas entre la entrada y salida, estas capas son la fuerza de procesamiento detrás del sistema de clasificación, mismas que le dan su nombre al mismo. 
 
@@ -115,7 +116,157 @@ Como en la mayoría de los sistemas de clasificación, el procesamiento de datos
 El algoritmo Multicapa fue diseñado para aproximar cualquier función continua además de tener la capacidad de resolver problemas no linealmente separables. Los principales casos de uso del Perceptrón Multicapa son la clasificación, el reconocimiento, la predicción y la aproximación de patrones. **Abirami, S., & Chitra, P. (2020)**. <br>
 
 # Implementación 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in justo vitae ligula pharetra vehicula ac non ex. Donec faucibus justo risus, eget porta ligula luctus pretium. Mauris fermentum nulla non ex congue, sit amet feugiat nisl mollis. In sit amet elit eu sapien egestas vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam fringilla nisi non enim semper, at laoreet magna feugiat. Nulla nisi leo, semper id dapibus ac, ultricies at metus. Nunc mollis leo gravida tincidunt efficitur. Fusce dictum nibh a elit posuere, vitae fermentum augue sollicitudin. Mauris quis nibh mollis, feugiat dui at, pulvinar nibh.
+Para llevar a cabo este proyecto se utilizó Apache Spark con el lenguaje de programación Scala, se decidió utilizar este FrameWork por su eficiencia para Big Data.
+
+### Uso de Máquinas de Vectores Soporte (SVM)
+Se importaron las librerías que se ocuparan 
+<p>
+  <img src="/Images/FinalProyect/img3.jpg" />
+</p><br>
+
+Aquí usamos este código para minimizar los errores e importamos el dataframe.
+<p>
+  <img src="/Images/FinalProyect/img4.jpg" />
+</p><br>
+
+Cargar el CSV bank-full para los datos
+<p>
+  <img src="/Images/FinalProyect/img5.jpg" />
+</p><br>
+
+Indexar la columna "y", cree un vector con las columnas con datos numéricos y nombrarlo como características, use el objeto ensamblador para transformar características 
+<p>
+  <img src="/Images/FinalProyect/img6.jpg" />
+</p>
+<p>
+  <img src="/Images/FinalProyect/img7.jpg" />
+</p><br>
+
+Cambiar el nombre de la columna "y" como etiqueta, Unión de etiqueta y características como data Indexed, Creación de labelIndexer y feature Indexer para la canalización
+<p>
+  <img src="/Images/FinalProyect/img8.jpg" />
+</p><br>
+
+Datos de entrenamiento como 70% y datos de prueba como 30%.
+<p>
+  <img src="/Images/FinalProyect/img9.jpg" />
+</p><br>
+
+Objeto de máquina vectorial de soporte lineal, ajuste de los datos de entrenamiento en el modelo, transformación de los datos de prueba para las predicciones.
+<p>
+  <img src="/Images/FinalProyect/img10.jpg" />
+</p><br>
+
+Obtención de métricas, matriz de confusión, precisión y error de prueba.
+<p>
+  <img src="/Images/FinalProyect/img11.jpg" />
+</p>
+<p>
+  <img src="/Images/FinalProyect/img12.jpg" />
+</p>
+
+### Uso de Clasificadores de árboles de decisión
+Para el árbol de decisiones utilizamos estas librerías
+<p>
+  <img src="/Images/FinalProyect/img13.jpg" />
+</p><br>
+
+Aquí usamos este código para minimizar los errores e importamos el dataframe.
+<p>
+  <img src="/Images/FinalProyect/img14.jpg" />
+</p><br>
+
+En esta parte transformamos los datos categóricos a numéricos, también se fusionó con los nuevos datos.
+<p>
+  <img src="/Images/FinalProyect/img15.jpg" />
+</p><br>
+
+Aquí tenemos el modelo de entrenamiento 
+<p>
+  <img src="/Images/FinalProyect/img16.jpg" />
+</p><br>
+
+Convierta las etiquetas indexadas en etiquetas originales.
+Cadena de indexadores y árbol en un Pipeline.
+Entrena el modelo, esto también ejecuta los indexadores.
+<p>
+  <img src="/Images/FinalProyect/img17.jpg" />
+</p><br>
+
+se realizan las predicciones.
+se muestran las primeras 5 filas. 
+<p>
+  <img src="/Images/FinalProyect/img18.jpg" />
+</p><br>
+
+Seleccionar predicción, etiqueta.
+<p>
+  <img src="/Images/FinalProyect/img19.jpg" />
+</p><br>
+
+Se calculan los errores de prueba y la precisión.
+<p>
+  <img src="/Images/FinalProyect/img20.jpg" />
+</p>
+
+### Uso de Regresión Logística
+Código de ejecución del modelo de regresión logística:
+```js
+val seed = 5043
+val Array(trainingData, testData) = dataindexed.randomSplit(Array(0.7, 0.3), seed)
+
+val logisticRegression = new LogisticRegression().setMaxIter(100).setRegParam(0.02).setElasticNetParam(0.8)
+
+val logisticRegressionModel = logisticRegression.fit(trainingData)
+
+val predictionDf = logisticRegressionModel.transform(testData)
+
+predictionDf.show(10)
+```
+
+Salida:
+<p>
+  <img src="/Images/FinalProyect/img21.jpg" />
+</p>
+<p>
+  <img src="/Images/FinalProyect/img22.jpg" />
+</p>
+
+### Uso de Perceptrón Multicapa
+Código de ejecución del modelo de regresión logística:
+```js
+val labelIndexer = new StringIndexer().setInputCol("loan").setOutputCol("indexedLabel").fit(df)
+val indexed = labelIndexer.transform(df).withColumnRenamed("indexedLabel", "label")
+
+val assembler = new VectorAssembler().setInputCols(Array("balance","day","duration","previous")).setOutputCol("features")
+val features = assembler.transform(indexed)
+
+val splits = features.randomSplit(Array(0.7, 0.3), seed = 1234L)
+val train = splits(0)
+val test = splits(1)
+
+val layers = Array[Int](4, 5, 4, 2)
+
+val trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
+
+val model = trainer.fit(train)
+
+val result = model.transform(test)
+val predictionAndLabels = result.select("prediction", "label")
+val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy")
+
+println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
+val error = 1 - evaluator.evaluate(predictionAndLabels)
+println("Error: " + error)
+```
+
+Salida:
+<p>
+  <img src="/Images/FinalProyect/img23.jpg" />
+</p>
+<p>
+  <img src="/Images/FinalProyect/img24.jpg" />
+</p>
 
 Cras rhoncus luctus nisl, non mollis nisi sodales in. Nulla purus ipsum, semper dictum ex vel, vehicula blandit dui. Fusce quis sapien nec eros euismod posuere. Morbi tempus massa sed maximus molestie. Praesent non eros felis. Donec ut ligula lectus. Nunc quis purus fringilla eros ultrices interdum eget eu lectus. Praesent vel posuere dui, a commodo elit. Proin a eros suscipit, interdum purus sed, convallis tellus. <br>
 

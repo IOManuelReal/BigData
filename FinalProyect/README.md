@@ -115,7 +115,7 @@ As in most classification systems, data processing follows a forward order like 
 
 The Multilayer algorithm was designed to approximate any continuous function as well as having the ability to solve nonlinearly separable problems. The main use cases of the Multilayer Perceptron are pattern classification, recognition, prediction and approximation. **Abirami, S., & Chitra, P. (2020)**. <br>
 
-# implementation
+# Implementation
 To carry out this project, Apache Spark was used with the Scala programming language, it was decided to use this FrameWork for its efficiency for Big Data.
 
 ### Use of Support Vector Machines (SVM)
@@ -259,7 +259,7 @@ val error = 1 - evaluator.evaluate(predictionAndLabels)
 println("Error: " + error)
 ```
 
-Salida:
+Exit:
 <p>
   <img src="/Images/FinalProyect/img23.jpg" />
 </p>
@@ -267,9 +267,10 @@ Salida:
   <img src="/Images/FinalProyect/img24.jpg" />
 </p>
 
+
 Cras rhoncus luctus nisl, non mollis nisi sodales in. Nulla purus ipsum, semper dictum ex vel, vehicula blandit dui. Fusce quis sapien nec eros euismod posuere. Morbi tempus massa sed maximus molestie. Praesent non eros felis. Donec ut ligula lectus. Nunc quis purus fringilla eros ultrices interdum eget eu lectus. Praesent vel posuere dui, a commodo elit. Proin a eros suscipit, interdum purus sed, convallis tellus. <br>
 
-# Resultados 
+# Results 
 Average algorithms
 
 | **Algorithm**             | **Accuracy** | **Test Error** |

@@ -26,20 +26,20 @@
 > Manuel Angel Real Castro  *18212253*
 
 # Indice
-- [Introduccion](#introducción)
-- [Marco teoríco](#marco-teórico)
-  - [Máquinas de Vectores Soporte (SVM)](#m%C3%A1quinas-de-vectores-soporte-svm)
-  - [Clasificadores de árboles de decisión](#clasificadores-de-%C3%A1rboles-de-decisi%C3%B3n)
-  - [Regresión Logística](#regresi%C3%B3n-log%C3%ADstica)
-  - [Perceptrón Multicapa](#perceptr%C3%B3n-multicapa)
-- [Implementación](#implementación)
-  - [Uso de Máquinas de Vectores Soporte (SVM)](#uso-de-m%C3%A1quinas-de-vectores-soporte-svm) 
-  - [Uso de Clasificadores de árboles de decisión](#uso-de-clasificadores-de-%C3%A1rboles-de-decisi%C3%B3n)
-  - [Uso de Regresión Logística](#uso-de-regresi%C3%B3n-log%C3%ADstica)
-  - [Uso de Perceptrón Multicapa](#uso-de-perceptr%C3%B3n-multicapa)
-- [Resultados](#resultados) 
-- [Conclusiones](#conclusiones)
-- [Referencias](#referencias)
+- [Introduction](#introduction)
+- [Theoretical framework](#theoretical-framework)
+  - [Support Vector Machines (SVM)](#support-vector-machines-svm)
+  - [Decision tree classifiers](#decision-tree-classifiers)
+  - [Logistic regression](#logistic-regression)
+  - [Multilayer Perceptron](#multilayer-perceptron)
+- [Implementation](#implementation)
+  - [Use of Support Vector Machines (SVM)](#use-of-support-vector-machines-svm) 
+  - [Using Decision Tree Classifiers](#using-decision-tree-classifiers)
+  - [Using Logistic Regression](#using-logistic-regression)
+  - [Use of Multilayer Perceptron](#use-of-multilayer-perceptron)
+- [Results](#results) 
+- [Conclusions](#conclusions)
+- [References](#references)
 
 # Introduction
 Within computer science, there are particular concepts that form the basis of it as well as its importance, in this case, algorithms are a fundamental part of computer science, it consists of a series of ordered steps that allow us to calculate or develop A homework. The algorithm is the basis of programming as we know it and this allows us to know how a code works long before writing it.
@@ -205,7 +205,9 @@ Test errors and precision are calculated.
 <p>
   <img src="/Images/FinalProyect/img20.jpg" />
 </p>
+
 ### Using Logistic Regression
+
 Logistic regression model execution code:
 ```js
 val seed = 5043
@@ -229,8 +231,13 @@ Exit:
 </p>
 
 ### Use of Multilayer Perceptron
+
 Logistic regression model execution code:
 ```js
+
+
+  
+
 val labelIndexer = new StringIndexer().setInputCol("loan").setOutputCol("indexedLabel").fit(df)
 val indexed = labelIndexer.transform(df).withColumnRenamed("indexedLabel", "label")
 
@@ -254,8 +261,8 @@ val evaluator = new MulticlassClassificationEvaluator().setMetricName("accuracy"
 println(s"Test set accuracy = ${evaluator.evaluate(predictionAndLabels)}")
 val error = 1 - evaluator.evaluate(predictionAndLabels)
 println("Error: " + error)
-```
 
+```
 Exit:
 <p>
   <img src="/Images/FinalProyect/img23.jpg" />
@@ -269,6 +276,7 @@ Cras rhoncus luctus nisl, non mollis nisi sodales in. Nulla purus ipsum, semper 
 
 # Results 
 Average algorithms
+
 
 | **Algorithm**             | **Accuracy** | **Test Error** |
 |---------------------------|:------------:|:--------------:|

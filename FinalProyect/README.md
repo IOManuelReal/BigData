@@ -41,6 +41,7 @@
   - [Use of Multilayer Perceptron](#use-of-multilayer-perceptron)
 - [Results](#results) 
 - [Conclusions](#conclusions)
+- [Video](#video)
 - [References](#references)
 
 # Introduction
@@ -294,6 +295,10 @@ Within the tests carried out with each of the classification systems, we obtaine
 As we can see, each algorithm has its advantages and disadvantages, so although we have a metric value obtained in this research, it is always good to take each of these systems into account when classifying data. Well, it can be more effective when it comes to obtaining more accurate data.
 
 Each algorithm presented its differences and its own elements to understand, so as well as considering its efficiency, its operation must be known in detail in order to use it correctly, because incorrect use can lead to inconsistencies. when running classification systems. <br>
+
+
+### Video
+https://www.youtube.com/watch?v=VQgevsnpu2Y
 
 # References
 Canales, J. C. (2009, agosto 18). Clasificación de grandes conjuntos de datos vía Máquinas de Vectores Soporte y aplicaciones en sistemas biológicos. Cinvestav.mx. http://www.ctrl.cinvestav.mx/~yuw/pdf/DoTesJCC.pdf

@@ -25,6 +25,8 @@
 > Anahi Del Carmen Hernandez Pablo *18210486* <br>
 > Manuel Angel Real Castro  *18212253*
 
+[Video Explicativo](https://youtu.be/VQgevsnpu2Y)
+
 # Indice
 - [Introduction](#introduction)
 - [Theoretical framework](#theoretical-framework)

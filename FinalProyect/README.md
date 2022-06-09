@@ -44,97 +44,97 @@ Data Processing <https://medium.com/@crscardellino/procesando-datos-con-spark-ii
 - [Conclusiones](#conclusiones)
 - [Referencias](#referencias)
 
-# Introducción
-Dentro de la informática, existen conceptos en particular que sientan la base de la misma al igual que su importancia, en este caso, los algoritmos son una parte fundamental de la informática, esta consiste de una serie de pasos ordenados que nos permiten calcular o desarrollar una tarea. El algoritmo es la base de la programación como la conocemos y esto nos permite saber el funcionamiento de un código mucho antes de escribirlo.
+# Introduction
+Within computer science, there are particular concepts that form the basis of it as well as its importance, in this case, algorithms are a fundamental part of computer science, it consists of a series of ordered steps that allow us to calculate or develop A homework. The algorithm is the basis of programming as we know it and this allows us to know how a code works long before writing it.
 
-Teniendo en cuenta esto, los algoritmos son cada vez más comunes, esto debido a que cada vez es más fácil solucionar los problemas con estos, además de que la tecnología ha generado un aumento en la capacidad de desarrollar programas más complejos capaces de resolver problemas de manera mucho más rápida y eficiente.
+Taking this into account, algorithms are becoming more common, this is because it is becoming easier to solve problems with them, in addition to the fact that technology has generated an increase in the ability to develop more complex programs capable of solving problems of much faster and more efficient.
 
-En recientes años la eficiencia y adaptabilidad de los algoritmos ha hecho que puedan ser utilizados de manera común en una infinidad de áreas, específicamente para el área de este proyecto, el análisis de conjuntos de datos. 
+In recent years, the efficiency and adaptability of the algorithms has meant that they can be used in a common way in an infinity of areas, specifically for the area of ​​this project, the analysis of data sets.
 
-Actualmente los algoritmos nos permiten analizar cantidades masivas de datos con un objetivo específico; ya sea elaborando predicciones, haciendo clasificaciones o revisando fallas en los mismos, aun así, estos algoritmos deben ser entrenados para su correcto funcionamiento, esto debido a que pueden llegar a tener fallas a la hora de hacer alguno de los objetivos ya mencionados.
+Currently algorithms allow us to analyze massive amounts of data with a specific objective; either making predictions, making classifications or reviewing failures in them, even so, these algorithms must be disturbances for their correct operation, this is because they can have failures when it comes to achieving some of the objectives already mentioned.
 
-En este proyecto sobre Algoritmos de Machine Learning, su comportamiento, diferencias entre distintos tipos de clasificación y compararlos para verificar la eficiencia de cada uno.
+In this project on Machine Learning Algorithms, their behavior, differences between different types of classification and compare them to verify the efficiency of each one.
 <br>
 
-# Marco teórico
-### Máquinas de Vectores Soporte (SVM)
-La clasificación de patrones se define como la tarea de categorizar algún objeto dentro de una de las categorías dadas llamadas clases, a partir de un conjunto de patrones asociados a cada objeto. Usamos el término “patrón” para denotar un vector de datos, x de dimensión p, donde x = (x1,...,xp) T, cuyos componentes xi son las medidas de las características de un objeto. Estas características son las variables especificadas por el investigador, debido a que por lo regular tienen un peso importante en los resultados de la clasificación.
+# Theoretical framework
+### Support Vector Machines (SVM)
+Pattern classification is defined as the task of categorizing some object into one of given categories called classes, from a set of patterns associated with each object. We use the term "pattern" to denote a vector of data, x of dimension p, where x = (x1,...,xp) T, whose components xi are the measures of the characteristics of an object. These characteristics are the variables specified by the researcher, because they usually have an important weight in the results of the classification.
 
-En general, existen dos enfoques principales de clasificación: clasificación supervisada y clasificación no supervisada. La clasificación no supervisada también es referida frecuentemente como agrupamiento. En este tipo de clasificación, los datos no son etiquetados y se desean encontrar grupos en los datos que se distingan unos de otros a partir de las características. En la clasificación supervisada tenemos un conjunto de datos de prueba, cada uno de estos consiste de medidas sobre un conjunto de variables y asociado a cada dato una etiqueta que define la clase del objeto.
+In general, there are two main classification approaches: supervised classification and unsupervised classification. Unsupervised classification is also frequently referred to as clustering. In this type of classification, the data is not labeled and we want to find groups in the data that are distinguished from each other based on characteristics. In supervised classification we have a set of test data, each of these consists of measurements on a set of variables and associated to each data a label that defines the class of the object.
 
-Las redes neuronales, árboles de decisión y SVM son clasificadores de aprendizaje supervisado. Los métodos de aprendizaje supervisado emplean un conjunto de pares entrada-salida, estos clasificadores adquieren una función de decisión que asocia a un nuevo dato una etiqueta de clase dentro de las clases dadas.
+Neural networks, decision trees and SVMs are supervised learning classifiers. Supervised learning methods employ a set of input-output pairs, these classifiers acquire a decision function that associates a class label within the given classes to a new data item.
 
-En este Capítulo son definidas las características teóricas de las SVM para problemas de clasificación con dos clases. Primero, definimos las funciones decisión y su importancia al generalizar, después definimos las Máquinas de Vectores Soporte con margen duro, para conjuntos de datos de entrenamiento linealmente separables en el espacio de entrada. Una vez concluido esto, nos extendemos a el caso linealmente no separable y es necesario trasladar el espacio de datos de entrada a un espacio de características altamente dimensional con el propósito de separar linealmente el espacio de características. **Canales, J. C. (2009, agosto 18)**.
+In this Chapter the theoretical characteristics of the SVM for classification problems with two classes are defined. First, we define decision functions and their importance in generalizing, then we define hard-margin Support Vector Machines for linearly separable training data sets in the input space. Once this is done, we extend to the linearly non-separable case and it is necessary to translate the input data space into a highly dimensional feature space in order to linearly separate the feature space. **Canales, J. C. (2009, August 18)**.
 
 <p align="center">
   <img src="/Images/FinalProyect/img1.jpg" />
 </p><br>
 
-### Clasificadores de árboles de decisión
-Los árboles de decisión son algoritmos estadísticos o técnicas de machine learning que nos permiten la construcción de modelos predictivos de analítica de datos para el Big Data basados en su clasificación según ciertas características o propiedades, o en la regresión mediante la relación entre distintas variables para predecir el valor de otra.
+### Decision tree classifiers
+Decision trees are statistical algorithms or machine learning techniques that allow us to build predictive data analytics models for Big Data based on their classification according to certain characteristics or properties, or on regression through the relationship between different variables to predict the value of another.
 
-En los modelos de clasificación queremos predecir el valor de una variable mediante la clasificación de la información en función de otras variables (tipo, pertenencia a un grupo…). Por ejemplo, queremos pronosticar qué personas comprarán un determinado producto, clasificando entre clientes y no clientes, o qué marcas de portátiles comprará cada persona mediante la clasificación entre las distintas marcas. Los valores a predecir son predefinidos, es decir, los resultados están definidos en un conjunto de posibles valores. **Vive. (2021, mayo 7)**.
+In classification models we want to predict the value of a variable by classifying the information based on other variables (type, group membership...). For example, we want to predict which people will buy a certain product, by classifying between customers and non-customers, or which brands of laptops each person will buy by classifying between different brands. The values ​​to be predicted are predefined, that is, the results are defined in a set of possible values. **Lives. (2021, May 7)**.
 
-En los modelos de regresión se intenta predecir el valor de una variable en función de otras variables que son independientes entre sí. Por ejemplo, queremos predecir el precio de venta del terreno en función de variables como su localización, superficie, distancia a la playa, etc. El posible resultado no forma parte de un conjunto predefinido, sino que puede tomar cualquier posible valor.
+In regression models, an attempt is made to predict the value of a variable based on other variables that are independent of each other. For example, we want to predict the sale price of the land based on variables such as its location, surface, distance to the beach, etc. The possible result is not part of a predefined set, but can take any possible value.
 
-El árbol de decisión es una estructura que está formada por ramas y nodos de distintos tipos:
+The decision tree is a structure that is made up of branches and nodes of different types:
 
-Los nodos internos representan cada una de las características o propiedades a considerar para tomar una decisión.
-Las ramas representan la decisión en función de una determinada condición (p. ej. probabilidad de ocurrencia).
-Los nodos finales representan el resultado de la decisión.
+The internal nodes represent each one of the characteristics or properties to consider to make a decision.
+The branches represent the decision based on a certain condition (eg probability of occurrence).
+The final nodes represent the result of the decision.
 
-Los árboles de decisión se emplean generalmente en Big Data para predecir la probabilidad de conseguir un determinado resultado en base a ciertas condiciones (incertidumbre). Ejemplos típicos de la utilización de este tipo de algoritmos son:
+Decision trees are generally used in Big Data to predict the probability of achieving a certain result based on certain conditions (uncertainty). Typical examples of the use of this type of algorithm are:
 
-Hacer estimaciones de las primas de seguros a cobrar a los asegurados.
-Predecir si se le debe ofrecer un determinado producto a una persona.
+Make estimates of insurance premiums to be charged to policyholders.
+Predict whether a certain product should be offered to a person.
 
-### Regresión Logística
-La regresión logística es un proceso de modelado de la probabilidad de un resultado discreto dada una variable de entrada. La regresión logística más común modela un resultado binario; algo que puede tomar dos valores como verdadero/falso, sí/no, etc. 
+### Logistic regression
+Logistic regression is a process of modeling the probability of a discrete outcome given an input variable. The most common logistic regression models a binary outcome; something that can take two values ​​like true/false, yes/no, etc.
 
-La regresión logística multinacional puede modelar escenarios donde hay más de dos posibles resultados discretos. La regresión logística es un método de análisis útil para problemas de clasificación, en los que intenta determinar si una nueva muestra encaja mejor en una categoría. Dado que los aspectos de la seguridad cibernética son problemas de clasificación, como la detección de ataques, la regresión logística es una técnica analítica útil. **Edgar, T. W., & Manz, D. O. (2017)**.
+Multi-country logistic regression can model scenarios where there are more than two possible discrete outcomes. Logistic regression is a useful analysis method for classification problems, where you are trying to determine whether a new sample best fits a category. Since aspects of cyber security are classification problems, such as attack detection, logistic regression is a useful analytical technique. **Edgar, T.W., & Manz, D.O. (2017)**.
 
-La regresión logística, a pesar de su nombre, es un modelo de clasificación en lugar de un modelo de regresión. La regresión logística es un método simple y más eficiente para problemas de clasificación binaria y lineal. Es un modelo de clasificación, que es muy fácil de realizar y logra muy buen desempeño con clases linealmente separables. Es un algoritmo ampliamente empleado para la clasificación en la industria. 
+Logistic regression, despite its name, is a classification model rather than a regression model. Logistic regression is a simpler and more efficient method for binary and linear classification problems. It is a classification model, which is very easy to perform and achieves very good performance with linearly separable classes. It is a widely used algorithm for classification in the industry.
 
-El modelo de regresión logística, como el Adaline y el perceptrón, es un método estadístico para la clasificación binaria que se puede generalizar a la clasificación multiclase. **Subasi, A. (2020)**.
+The logistic regression model, like the Adaline and the perceptron, is a statistical method for binary classification that can be generalized to multiclass classification. **Subasi, A. (2020)**.
 
-La regresión logística es otro potente algoritmo de aprendizaje automático supervisado que se utiliza para problemas de clasificación binaria (cuando el objetivo es categórico). La mejor manera de pensar en la regresión logística es que es una regresión lineal pero para problemas de clasificación. La regresión logística utiliza esencialmente una función logística definida a continuación para modelar una variable de salida binaria. 
+Logistic regression is another powerful supervised machine learning algorithm used for binary classification problems (when the goal is categorical). The best way to think of logistic regression is that it is linear regression but for classification problems. Logistic regression essentially uses a logistic function defined below to model a binary output variable.
 
-La principal diferencia entre la regresión lineal y la regresión logística es que el rango de la regresión logística está limitado entre 0 y 1. Además, a diferencia de la regresión lineal, la regresión logística no requiere una relación lineal entre las variables de entrada y salida. Esto se debe a la aplicación de una transformación logarítmica no lineal a la razón de probabilidades. **Belyadi, H., & Haghighat, A. (2021)**. 
+The main difference between linear regression and logistic regression is that the range of logistic regression is limited between 0 and 1. Also, unlike linear regression, logistic regression does not require a linear relationship between input and output variables. . This is due to the application of a nonlinear logarithmic transformation to the odds ratio. **Belyadi, H., & Haghighat, A. (2021)**.
 ‌
 
-### Perceptrón Multicapa
-El perceptrón multicapa (Multilayer Perceptron o MLP) se trata de una red neuronal artificial conformada por tres capas distintas: La capa de entrada, la oculta y la capa de salida.
+### Multilayer Perceptron
+The multilayer perceptron (Multilayer Perceptron or MLP) is an artificial neural network made up of three different layers: the input layer, the hidden layer and the output layer.
 
 <p align="center">
   <img src="/Images/FinalProyect/img2.jpg" />
 </p><br>
 
-Como su nombre lo dice, la capa de entrada se encarga de tomar los datos que serán procesados por el sistema de clasificación, mientras que la salida nos permitirá ver los resultados de la misma. Dentro del perceptrón multicapa existe una cantidad de capas ocultas colocadas entre la entrada y salida, estas capas son la fuerza de procesamiento detrás del sistema de clasificación, mismas que le dan su nombre al mismo. 
+As its name suggests, the input layer is responsible for taking the data that will be processed by the classification system, while the output will allow us to see the results of it. Within the multilayer perceptron there are a number of hidden layers placed between the input and output, these layers are the processing force behind the classification system, which gives it its name.
 
-Como en la mayoría de los sistemas de clasificación, el procesamiento de datos sigue un orden de avance como el de la imagen anterior. Las neuronas son entrenadas con el algoritmo de aprendizaje de retropropagación, el cual aprende constantemente con la propagación de datos elaborando una solución basándose en los datos obtenidos tanto de simulaciones anteriores o los datos a procesar. **Inteligencia Artificial. (2020, May 3)**.
+As in most classification systems, data processing follows a forward order like the one in the previous image. The neurons are trained with the backpropagation learning algorithm, which constantly learns with the propagation of data, elaborating a solution based on the data obtained from previous simulations or the data to be processed. **Artificial intelligence. (2020, May 3)**.
 
-El algoritmo Multicapa fue diseñado para aproximar cualquier función continua además de tener la capacidad de resolver problemas no linealmente separables. Los principales casos de uso del Perceptrón Multicapa son la clasificación, el reconocimiento, la predicción y la aproximación de patrones. **Abirami, S., & Chitra, P. (2020)**. <br>
+The Multilayer algorithm was designed to approximate any continuous function as well as having the ability to solve nonlinearly separable problems. The main use cases of the Multilayer Perceptron are pattern classification, recognition, prediction and approximation. **Abirami, S., & Chitra, P. (2020)**. <br>
 
-# Implementación 
-Para llevar a cabo este proyecto se utilizó Apache Spark con el lenguaje de programación Scala, se decidió utilizar este FrameWork por su eficiencia para Big Data.
+# implementation
+To carry out this project, Apache Spark was used with the Scala programming language, it was decided to use this FrameWork for its efficiency for Big Data.
 
-### Uso de Máquinas de Vectores Soporte (SVM)
-Se importaron las librerías que se ocuparan 
+### Use of Support Vector Machines (SVM)
+The libraries that dealt with
 <p>
   <img src="/Images/FinalProyect/img3.jpg" />
 </p><br>
 
-Aquí usamos este código para minimizar los errores e importamos el dataframe.
+Here we use this code to minimize errors and import the dataframe.
 <p>
   <img src="/Images/FinalProyect/img4.jpg" />
 </p><br>
 
-Cargar el CSV bank-full para los datos
+Load the CSV bank-full for the data
 <p>
   <img src="/Images/FinalProyect/img5.jpg" />
 </p><br>
 
-Indexar la columna "y", cree un vector con las columnas con datos numéricos y nombrarlo como características, use el objeto ensamblador para transformar características 
+Index the column "y", create a vector with the columns with numeric data and name it as features, use the assembler object to transform features
 <p>
   <img src="/Images/FinalProyect/img6.jpg" />
 </p>
@@ -142,22 +142,22 @@ Indexar la columna "y", cree un vector con las columnas con datos numéricos y n
   <img src="/Images/FinalProyect/img7.jpg" />
 </p><br>
 
-Cambiar el nombre de la columna "y" como etiqueta, Unión de etiqueta y características como data Indexed, Creación de labelIndexer y feature Indexer para la canalización
+Rename column "y" as label, Union of label and features like data Indexed, Create labelIndexer and feature Indexer for pipeline
 <p>
   <img src="/Images/FinalProyect/img8.jpg" />
 </p><br>
 
-Datos de entrenamiento como 70% y datos de prueba como 30%.
+Training data as 70% and test data as 30%.
 <p>
   <img src="/Images/FinalProyect/img9.jpg" />
 </p><br>
 
-Objeto de máquina vectorial de soporte lineal, ajuste de los datos de entrenamiento en el modelo, transformación de los datos de prueba para las predicciones.
+Linear support vector machine object, fit of training data to model, transformation of test data for predictions.
 <p>
   <img src="/Images/FinalProyect/img10.jpg" />
 </p><br>
 
-Obtención de métricas, matriz de confusión, precisión y error de prueba.
+Obtaining metrics, confusion matrix, precision and test error.
 <p>
   <img src="/Images/FinalProyect/img11.jpg" />
 </p>
@@ -165,52 +165,51 @@ Obtención de métricas, matriz de confusión, precisión y error de prueba.
   <img src="/Images/FinalProyect/img12.jpg" />
 </p>
 
-### Uso de Clasificadores de árboles de decisión
-Para el árbol de decisiones utilizamos estas librerías
+### Using Decision Tree Classifiers
+For the decision tree we use these libraries
 <p>
   <img src="/Images/FinalProyect/img13.jpg" />
 </p><br>
 
-Aquí usamos este código para minimizar los errores e importamos el dataframe.
+Here we use this code to minimize errors and import the dataframe.
 <p>
   <img src="/Images/FinalProyect/img14.jpg" />
 </p><br>
 
-En esta parte transformamos los datos categóricos a numéricos, también se fusionó con los nuevos datos.
+In this part we transform the categorical data to numeric, it is also merged with the new data.
 <p>
   <img src="/Images/FinalProyect/img15.jpg" />
 </p><br>
 
-Aquí tenemos el modelo de entrenamiento 
+Here we have the training model
 <p>
   <img src="/Images/FinalProyect/img16.jpg" />
 </p><br>
 
-Convierta las etiquetas indexadas en etiquetas originales.
-Cadena de indexadores y árbol en un Pipeline.
-Entrena el modelo, esto también ejecuta los indexadores.
+Convert indexed tags to original tags.
+Chain of indexers and tree in a Pipeline.
+Train the model, this also runs the indexers.
 <p>
   <img src="/Images/FinalProyect/img17.jpg" />
 </p><br>
 
-se realizan las predicciones.
-se muestran las primeras 5 filas. 
+predictions are made.
+the first 5 rows are displayed.
 <p>
   <img src="/Images/FinalProyect/img18.jpg" />
 </p><br>
 
-Seleccionar predicción, etiqueta.
+Select prediction, tag.
 <p>
   <img src="/Images/FinalProyect/img19.jpg" />
 </p><br>
 
-Se calculan los errores de prueba y la precisión.
+Test errors and precision are calculated.
 <p>
   <img src="/Images/FinalProyect/img20.jpg" />
 </p>
-
-### Uso de Regresión Logística
-Código de ejecución del modelo de regresión logística:
+### Using Logistic Regression
+Logistic regression model execution code:
 ```js
 val seed = 5043
 val Array(trainingData, testData) = dataindexed.randomSplit(Array(0.7, 0.3), seed)
@@ -224,7 +223,7 @@ val predictionDf = logisticRegressionModel.transform(testData)
 predictionDf.show(10)
 ```
 
-Salida:
+Exit:
 <p>
   <img src="/Images/FinalProyect/img21.jpg" />
 </p>
@@ -232,8 +231,8 @@ Salida:
   <img src="/Images/FinalProyect/img22.jpg" />
 </p>
 
-### Uso de Perceptrón Multicapa
-Código de ejecución del modelo de regresión logística:
+### Use of Multilayer Perceptron
+Logistic regression model execution code:
 ```js
 val labelIndexer = new StringIndexer().setInputCol("loan").setOutputCol("indexedLabel").fit(df)
 val indexed = labelIndexer.transform(df).withColumnRenamed("indexedLabel", "label")
@@ -281,14 +280,14 @@ Average algorithms
 | **Multilayer perceptron** | 0.838981     | 0.161018       |
 <br>
 
-# Conclusiones
-Dentro de las pruebas realizadas con cada uno de los sistemas de clasificación, obtuvimos un resultado en donde el algoritmo de Regresión Logística obtuvo un valor más alto a la hora de compararlo con los resultados de los demás algoritmos.
+# Conclusions
+Within the tests carried out with each of the classification systems, we obtained a result where the Logistic Regression algorithm obtained a higher value when compared to the results of the other algorithms.
 
-Como podemos observar, cada algoritmo tiene sus ventajas y desventajas, por lo que aunque tenemos un valor métrico obtenido en esta investigación, siempre es bueno tomar en cuenta cada uno de estos sistemas a la hora de clasificar datos. Pues puede ser más eficaz a la hora de obtener datos más precisos.
+As we can see, each algorithm has its advantages and disadvantages, so although we have a metric value obtained in this research, it is always good to take each of these systems into account when classifying data. Well, it can be more effective when it comes to obtaining more accurate data.
 
-Cada algoritmo presentó sus diferencias y sus propios elementos a comprender, por lo que al igual que considerar su eficiencia, se debe conocer a detalle el funcionamiento del mismo para poder hacer uso del mismo correctamente, debido a que el uso incorrecto puede llevar a inconsistencias a la hora de ejecutar los sistemas de clasificación. <br>
+Each algorithm presented its differences and its own elements to understand, so as well as considering its efficiency, its operation must be known in detail in order to use it correctly, because incorrect use can lead to inconsistencies. when running classification systems. <br>
 
-# Referencias 
+# References
 Canales, J. C. (2009, agosto 18). Clasificación de grandes conjuntos de datos vía Máquinas de Vectores Soporte y aplicaciones en sistemas biológicos. Cinvestav.mx. http://www.ctrl.cinvestav.mx/~yuw/pdf/DoTesJCC.pdf
 
 Vive. (2021, mayo 7). Árboles de decisión: en qué consisten y aplicación en Big Data. UNIR. https://www.unir.net/ingenieria/revista/arboles-de-decision/
